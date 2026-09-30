@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#090d18">
+    <meta name="description" content="Metro Rush 2.0 — a neon-lit, original 3D endless runner through a future city.">
+    <title>Metro Rush 2.0 — Run the night</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./game.css">
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+        }
+      }
+    </script>
+    <script type="module" src="./game.js"></script>
+  </head>
+  <body>
+    <main class="game-shell">
+      <div id="scene" class="scene" aria-label="Metro Rush 2.0 3D game"></div>
+      <div class="scene-vignette" aria-hidden="true"></div>
+      <div class="speed-lines" id="speed-lines" aria-hidden="true"></div>
+
+      <header class="topbar">
+        <a class="wordmark" href="./" aria-label="Metro Rush 2.0 home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>METRO<span class="brand-light">RUSH</span><small>2.0</small></span>
+        </a>
+        <div class="run-status"><i></i><span id="status-label">NIGHT LINE · 07</span></div>
+        <button class="icon-button sound-button" id="sound-button" type="button" aria-label="Turn sound off" title="Toggle sound"><span id="sound-icon">♪</span></button>
+      </header>
+
+      <section class="hud" id="hud" aria-label="Run statistics" hidden>
+        <div class="hud-score"><span class="hud-label">SCORE</span><strong id="score">000000</strong></div>
+        <div class="hud-stats">
+          <div><span class="hud-label">DISTANCE</span><strong><span id="distance">0</span><small>m</small></strong></div>
+          <div><span class="hud-label">TOKENS</span><strong class="token-value"><span class="token-icon">✦</span><span id="coins">0</span></strong></div>
+          <div class="hud-best"><span class="hud-label">PERSONAL BEST</span><strong id="high-score">0</strong></div>
+        </div>
+        <button class="icon-button pause-button" id="pause-button" type="button" aria-label="Pause game" title="Pause (P)"><span>Ⅱ</span></button>
+      </section>
+
+      <div class="powerup-display" id="powerup-display" hidden>
+        <span class="power-icon" id="power-icon">✦</span>
+        <span class="power-copy"><strong id="power-name">COIN MAGNET</strong><small id="power-time">8.0 s</small></span>
+        <span class="power-meter"><i id="power-meter"></i></span>
+      </div>
+
+      <div class="mobile-hint" id="mobile-hint"><span>SWIPE TO MOVE</span><span class="hint-arrows">← &nbsp; ↑ &nbsp; ↓ &nbsp; →</span></div>
+
+      <div class="overlay" id="start-screen">
+        <div class="overlay-card start-card">
+          <div class="kicker"><span class="kicker-line"></span> YOUR NEXT STOP: ANYWHERE</div>
+          <h1>RUN THE<br><span>NIGHT.</span></h1>
+          <p class="intro">Three lanes. One electric city.<br>How far can you make it?</p>
+          <div class="start-facts"><span><b>01</b> DODGE THE TRAFFIC</span><span><b>02</b> GRAB THE GLOW</span></div>
+          <button class="action-button" id="start-button" type="button"><span>START YOUR RUN</span><b>↗</b></button>
+          <div class="controls-line"><span><kbd>A</kbd><kbd>D</kbd> or <kbd>←</kbd><kbd>→</kbd> MOVE</span><span><kbd>SPACE</kbd> JUMP</span><span><kbd>↓</kbd> SLIDE</span></div>
+        </div>
+        <div class="overlay-side-note">NEON DISTRICT <span>///</span> 24:08</div>
+      </div>
+
+      <div class="overlay overlay-hidden" id="pause-screen" aria-hidden="true">
+        <div class="overlay-card compact-card">
+          <div class="kicker"><span class="kicker-line"></span> TAKE A BREATHER</div>
+          <h2>PAUSED<span>.</span></h2>
+          <p>Your train isn't going anywhere. Yet.</p>
+          <button class="action-button" id="resume-button" type="button"><span>BACK IN THE RUN</span><b>▶</b></button>
+          <button class="text-button" id="pause-restart-button" type="button">Restart run <span>↗</span></button>
+          <div class="controls-line"><kbd>P</kbd> RESUME</div>
+        </div>
+      </div>
+
+      <div class="overlay overlay-hidden" id="game-over-screen" aria-hidden="true">
+        <div class="overlay-card compact-card">
+          <div class="kicker"><span class="kicker-line"></span> END OF THE LINE</div>
+          <h2>RUN<br><span>COMPLETE.</span></h2>
+          <p class="run-message" id="run-message">The city will be here for your next run.</p>
+          <div class="results-grid">
+            <div><span>DISTANCE</span><strong id="final-distance">0<small>m</small></strong></div>
+            <div><span>TOKENS</span><strong id="final-coins">0</strong></div>
+            <div><span>SCORE</span><strong id="final-score">0</strong></div>
+          </div>
+          <button class="action-button" id="restart-button" type="button"><span>RUN IT BACK</span><b>↻</b></button>
+          <div class="best-note" id="new-best" hidden>✦ &nbsp; NEW PERSONAL BEST</div>
+        </div>
+      </div>
+
+      <div class="toast" id="toast" role="status" aria-live="polite"></div>
+      <div class="footer-mark"><span>MR</span> METRO RUSH <i>2.0</i> <b>·</b> KEEP MOVING</div>
+    </main>
+  </body>
+</html>
