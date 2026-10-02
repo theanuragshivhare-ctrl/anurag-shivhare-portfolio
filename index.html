@@ -1,191 +1,500 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#08090f">
-    <meta name="description" content="NEXORA is your AI-powered space to plan your studies, build skills, and make your next big idea happen.">
-    <title>NEXORA — Make your next move</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1220" />
+    <meta
+      name="description"
+      content="ISC Student Hub — Programming & Computing (C & UNIX) for ISC – S101 by Sandesh Gupta."
+    />
+    <title>ISC Student Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="ambient ambient-one" aria-hidden="true"></div>
-    <div class="ambient ambient-two" aria-hidden="true"></div>
-
-    <header class="site-header">
-      <a class="brand" href="#home" aria-label="NEXORA home">
-        <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span>
-        <span>NEXORA</span>
-      </a>
-      <button class="menu-toggle icon-button" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </button>
-      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
-        <a class="nav-link is-active" href="#home">Home</a>
-        <a class="nav-link" href="#skills">Skills</a>
-        <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#planner">Planner</a>
-      </nav>
-      <div class="header-actions">
-        <a class="text-link contact-link" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
-        <button class="theme-toggle icon-button" type="button" aria-label="Switch to light theme" title="Switch theme">
-          <svg class="theme-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>
-        </button>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero section-shell" id="home">
-        <div class="hero-copy reveal">
-          <div class="eyebrow"><span class="eyebrow-dot"></span> YOUR SPACE TO LEVEL UP <span class="eyebrow-line"></span></div>
-          <h1>Your Study.<br>Your Skills.<br><span>Your Future.</span></h1>
-          <p class="hero-description">A little more focus. A lot more momentum. Meet the workspace that turns what you want to learn into what you can do.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#planner">Launch dashboard <span aria-hidden="true">↗</span></a>
-            <a class="button button-quiet" href="#projects"><span class="play-icon" aria-hidden="true">▶</span> Explore the workspace</a>
-          </div>
-          <div class="hero-social-proof">
-            <div class="avatar-stack" aria-hidden="true"><span>J</span><span>M</span><span>A</span><span>+</span></div>
-            <p><strong>2,400+</strong> learners finding their flow</p>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand-box">
+          <div class="brand-mark">I</div>
+          <div>
+            <p class="brand-kicker">Academic portal</p>
+            <h2>ISC Student Hub</h2>
           </div>
         </div>
 
-        <div class="hero-visual reveal" aria-label="NEXORA learning dashboard preview">
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
-          <div class="hero-glow"></div>
-          <div class="dash-preview glass-panel">
-            <div class="preview-topline"><div><span class="tiny-label">YOUR MOMENTUM</span><strong>Looking good, Alex <span class="wave">✦</span></strong></div><span class="live-indicator">LIVE</span></div>
-            <div class="preview-score"><span class="score-number">84</span><span class="score-percent">%</span><span class="score-change">↗ 12% <small>this week</small></span></div>
-            <div class="chart-wrap" aria-label="Weekly study hours chart">
-              <div class="chart-grid"><span>8h</span><span>4h</span><span>0h</span></div>
-              <div class="chart-bars" aria-hidden="true">
-                <span style="--bar: 39%"><i>M</i></span><span style="--bar: 60%"><i>T</i></span><span style="--bar: 47%"><i>W</i></span><span style="--bar: 78%"><i>T</i></span><span style="--bar: 58%"><i>F</i></span><span class="bar-current" style="--bar: 94%"><i>S</i></span><span style="--bar: 31%"><i>S</i></span>
+        <nav class="side-nav" aria-label="Main navigation">
+          <button class="nav-item is-active" data-target="dashboard" type="button">Dashboard</button>
+          <button class="nav-item" data-target="syllabus" type="button">Syllabus</button>
+          <button class="nav-item" data-target="notes" type="button">Notes</button>
+          <button class="nav-item" data-target="practicals" type="button">Practicals</button>
+          <button class="nav-item" data-target="quiz" type="button">Quiz Zone</button>
+          <button class="nav-item" data-target="assignments" type="button">Assignments</button>
+          <button class="nav-item" data-target="papers" type="button">Previous Papers</button>
+          <button class="nav-item" data-target="announcements" type="button">Announcements</button>
+          <button class="nav-item" data-target="resources" type="button">Resources</button>
+          <button class="nav-item" data-target="about" type="button">About ISC</button>
+        </nav>
+
+        <div class="sidebar-card">
+          <p class="mini-label">Professor</p>
+          <h3>Sandesh Gupta</h3>
+          <p>ISC – S101</p>
+        </div>
+      </aside>
+
+      <div class="content-shell">
+        <header class="topbar">
+          <div class="search-wrap">
+            <div class="search-box" role="search">
+              <span class="search-icon">⌕</span>
+              <input id="searchInput" type="search" placeholder="Search notes, topics, papers, activities..." aria-label="Search ISC content" />
+            </div>
+            <div class="search-results hidden" id="searchResults" aria-live="polite"></div>
+          </div>
+
+          <div class="topbar-actions">
+            <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle theme">☾</button>
+            <div class="user-pill">
+              <div class="avatar">S</div>
+              <div>
+                <strong>Student</strong>
+                <span>BTech CSE • 1st Year</span>
               </div>
             </div>
-            <div class="preview-divider"></div>
-            <div class="preview-bottom"><div class="mini-course-icon">✳</div><div class="mini-course-copy"><strong>Design systems</strong><span>Module 04 · 6 lessons left</span></div><div class="mini-course-progress"><svg viewBox="0 0 42 42" aria-label="68 percent complete"><circle class="ring-track" cx="21" cy="21" r="17"></circle><circle class="ring-progress" cx="21" cy="21" r="17"></circle></svg><span>68%</span></div></div>
           </div>
-          <div class="float-card float-streak"><span class="float-icon streak-icon">✦</span><span><strong>6 day streak</strong><small>You’re on a roll</small></span><span class="float-spark">↗</span></div>
-          <div class="float-card float-ai"><span class="ai-orb">✳</span><span><strong>Your AI study buddy</strong><small>Ready when you are</small><i class="online-dot"></i></span></div>
-          <div class="hero-caption"><span class="caption-line"></span> YOUR PROGRESS, IN PERSPECTIVE</div>
-        </div>
-        <a class="scroll-cue" href="#overview" aria-label="Scroll to your overview"><span></span> SCROLL TO EXPLORE</a>
-      </section>
+        </header>
 
-      <section class="overview section-shell section-block" id="overview" aria-labelledby="overview-title">
-        <div class="section-heading reveal"><div><div class="eyebrow">A CLEARER PICTURE</div><h2 id="overview-title">Small steps. <span>Big energy.</span></h2></div><p>Your goals, moving in the right direction. This is what progress looks like when you make it yours.</p></div>
-        <div class="stats-grid">
-          <article class="stat-card reveal"><div class="stat-top"><span class="stat-icon violet">✳</span><span class="stat-trend">↗ 3 this month</span></div><div class="stat-value"><span class="counter" data-target="8" data-suffix="">0</span><span class="stat-unit"> skills</span></div><p>In your toolkit</p><div class="stat-decoration decoration-violet"></div></article>
-          <article class="stat-card reveal"><div class="stat-top"><span class="stat-icon mint">⌘</span><span class="stat-trend">↗ 2 this month</span></div><div class="stat-value"><span class="counter" data-target="12" data-suffix="">0</span><span class="stat-unit"> builds</span></div><p>Ideas made real</p><div class="stat-decoration decoration-mint"></div></article>
-          <article class="stat-card reveal"><div class="stat-top"><span class="stat-icon amber">▤</span><span class="stat-trend">↗ 1 in progress</span></div><div class="stat-value"><span class="counter" data-target="6" data-suffix="">0</span><span class="stat-unit"> courses</span></div><p>Curiosity, on repeat</p><div class="stat-decoration decoration-amber"></div></article>
-          <article class="stat-card reveal"><div class="stat-top"><span class="stat-icon blue">↗</span><span class="stat-trend">↗ 12% this week</span></div><div class="stat-value"><span class="counter" data-target="84" data-suffix="%">0</span><span class="stat-unit"> focus</span></div><p>And counting</p><div class="stat-decoration decoration-blue"></div></article>
-        </div>
-      </section>
+        <main>
+          <section class="section hero-section" id="dashboard">
+            <div class="hero-copy">
+              <p class="eyebrow">ISC STUDENT HUB</p>
+              <h1>Everything for ISC. One place.</h1>
+              <p class="lead">
+                ISC – S101 • Programming &amp; Computing (C &amp; UNIX)
+              </p>
+              <p class="lead muted-copy">
+                BTech CSE • 1st Year • Professor: Sandesh Gupta
+              </p>
+              <div class="cta-row">
+                <button class="primary-btn" type="button" data-scroll="notes">Explore Notes</button>
+                <button class="secondary-btn" type="button" data-scroll="quiz">Take a Quiz</button>
+              </div>
 
-      <section class="section-shell section-block" id="skills" aria-labelledby="skills-title">
-        <div class="section-heading reveal"><div><div class="eyebrow">BUILT BY YOU</div><h2 id="skills-title">Skills in <span>motion.</span></h2></div><p>Pick a skill to see where you’re putting your energy. Progress isn’t one-size-fits-all.</p></div>
-        <div class="skills-layout">
-          <div class="skills-panel glass-panel reveal">
-            <div class="panel-heading"><div><span class="tiny-label">YOUR SKILL STACK</span><strong>Growing, one session at a time</strong></div><span class="panel-menu" aria-hidden="true">•••</span></div>
-            <div class="skill-list">
-              <button class="skill-row" type="button" data-skill="Design" aria-pressed="false"><span class="skill-symbol skill-purple">◈</span><span class="skill-name"><strong>UI / UX Design</strong><small>Design · 8 projects</small></span><span class="skill-level">ADVANCED</span><span class="skill-bar"><i style="--level: 82%"></i></span><span class="skill-percent">82%</span></button>
-              <button class="skill-row" type="button" data-skill="Code" aria-pressed="false"><span class="skill-symbol skill-cyan">&lt;/&gt;</span><span class="skill-name"><strong>Frontend development</strong><small>Code · 5 projects</small></span><span class="skill-level">GROWING</span><span class="skill-bar"><i style="--level: 68%"></i></span><span class="skill-percent">68%</span></button>
-              <button class="skill-row" type="button" data-skill="Data" aria-pressed="false"><span class="skill-symbol skill-orange">⌁</span><span class="skill-name"><strong>Data storytelling</strong><small>Data · 3 projects</small></span><span class="skill-level">IN PROGRESS</span><span class="skill-bar"><i style="--level: 47%"></i></span><span class="skill-percent">47%</span></button>
-              <button class="skill-row" type="button" data-skill="Product" aria-pressed="false"><span class="skill-symbol skill-green">✳</span><span class="skill-name"><strong>Product thinking</strong><small>Strategy · 6 projects</small></span><span class="skill-level">GROWING</span><span class="skill-bar"><i style="--level: 61%"></i></span><span class="skill-percent">61%</span></button>
+              <div class="quick-badges">
+                <div class="mini-stat">
+                  <span class="badge-dot mint"></span>
+                  <div>
+                    <strong>Current focus</strong>
+                    <small>UNIX commands and shell navigation</small>
+                  </div>
+                </div>
+                <div class="mini-stat">
+                  <span class="badge-dot violet"></span>
+                  <div>
+                    <strong>Practical topic</strong>
+                    <small>Vi Editor • Practice lab</small>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="skill-note"><span>✦</span> Every expert was once a beginner. Keep going.</div>
-          </div>
-          <aside class="skills-aside reveal"><div class="aside-number">01 <span>/ 04</span></div><h3>Make room for your next <span>“I did that.”</span></h3><p>Tap a skill to find projects that put it to work. Your next favorite thing might be one session away.</p><a href="#projects" class="inline-link">Find your next project <span>↗</span></a><div class="skills-orbit" aria-hidden="true"><div class="orbit-core">✳</div><span class="orbit-tag tag-ui">UI</span><span class="orbit-tag tag-ai">AI</span><span class="orbit-tag tag-code">CODE</span></div></aside>
-        </div>
-      </section>
 
-      <section class="projects-section section-block" id="projects" aria-labelledby="projects-title">
-        <div class="section-shell">
-          <div class="section-heading reveal"><div><div class="eyebrow">MADE OF CURIOSITY</div><h2 id="projects-title">Proof of <span>possibility.</span></h2></div><p>Not just things you learned. Things you made. Your work deserves a little spotlight.</p></div>
-          <div class="project-toolbar reveal"><span class="tiny-label">YOUR PROJECTS</span><span class="filter-note" aria-live="polite">Showing all projects</span><button class="reset-filter" type="button" hidden>Show all <span>↗</span></button></div>
-          <div class="projects-grid">
-            <article class="project-card project-lilac reveal" data-skills="Design Product" data-title="Sonder — a softer kind of social" data-description="A more intentional way to stay close. Sonder rethinks the social feed around small circles, thoughtful check-ins, and fewer noisy notifications." data-category="PRODUCT DESIGN · 3 WEEKS">
-              <button class="project-open" type="button" aria-label="Explore the Sonder project">
-                <div class="project-art art-sonder"><span class="art-orb"></span><span class="art-orbit art-orbit-a"></span><span class="art-orbit art-orbit-b"></span><span class="art-app app-left">S</span><span class="art-app app-right">✳</span><span class="art-caption">A little closer,<br>a little quieter.</span><span class="art-card-mini"><i></i><i></i><i></i><b>+</b></span></div>
-                <div class="project-card-copy"><div class="project-meta"><span>PRODUCT DESIGN</span><span>01 / 03</span></div><h3>Sonder <span>— a softer kind of social</span></h3><p>Reimagining connection for people who care about less scrolling, more showing up.</p><span class="project-cta">Explore project <b>↗</b></span></div>
-              </button>
-              <button class="project-like" type="button" aria-label="Save Sonder project" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.7c0 4.4-8.8 10-8.8 10s-8.8-5.6-8.8-10a4.6 4.6 0 0 1 8.8-1.9 4.6 4.6 0 0 1 8.8 1.9Z"/></svg></button>
-            </article>
-            <article class="project-card project-cyan reveal" data-skills="Code Design" data-title="Orbit — your ideas, in sync" data-description="A lightweight focus app for turning big, fuzzy goals into small and satisfying next steps. Designed, prototyped, and coded from scratch." data-category="BUILD IN PUBLIC · 2 WEEKS">
-              <button class="project-open" type="button" aria-label="Explore the Orbit project">
-                <div class="project-art art-orbit-project"><span class="orbit-sun"></span><span class="orbit-path orbit-path-one"></span><span class="orbit-path orbit-path-two"></span><span class="orbit-project-word">ORBIT</span><span class="orbit-chip chip-one">FOCUS · 82%</span><span class="orbit-chip chip-two">✦ nice work!</span><span class="orbit-project-dot"></span></div>
-                <div class="project-card-copy"><div class="project-meta"><span>BUILD IN PUBLIC</span><span>02 / 03</span></div><h3>Orbit <span>— your ideas, in sync</span></h3><p>A gentle little productivity tool for plans that feel a bit more possible.</p><span class="project-cta">Explore project <b>↗</b></span></div>
-              </button>
-              <button class="project-like" type="button" aria-label="Save Orbit project" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.7c0 4.4-8.8 10-8.8 10s-8.8-5.6-8.8-10a4.6 4.6 0 0 1 8.8-1.9 4.6 4.6 0 0 1 8.8 1.9Z"/></svg></button>
-            </article>
-            <article class="project-card project-amber reveal" data-skills="Data Product" data-title="Common Ground — numbers with a story" data-description="An interactive look at what makes a neighborhood thrive, turning public data into a useful, inviting story anyone can explore." data-category="DATA STORYTELLING · 1 WEEK">
-              <button class="project-open" type="button" aria-label="Explore the Common Ground project">
-                <div class="project-art art-data"><div class="data-headline">GOOD<br>THINGS<br>GROW <span>HERE.</span></div><div class="data-plot"><i style="--point-y: 66%;--point-x: 3%"></i><i style="--point-y: 48%;--point-x: 21%"></i><i style="--point-y: 57%;--point-x: 38%"></i><i style="--point-y: 23%;--point-x: 55%"></i><i style="--point-y: 39%;--point-x: 72%"></i><i style="--point-y: 12%;--point-x: 91%"></i><svg viewBox="0 0 180 80" preserveAspectRatio="none" aria-hidden="true"><path d="M2 56 C24 57 21 36 40 41 S63 54 77 24 S107 30 121 20 S148 35 178 8"></path></svg></div><span class="data-label">THE NEIGHBORHOOD INDEX <b>2025 ↗</b></span><span class="data-sticker">BETTER<br>TOGETHER</span></div>
-                <div class="project-card-copy"><div class="project-meta"><span>DATA STORYTELLING</span><span>03 / 03</span></div><h3>Common Ground <span>— numbers with a story</span></h3><p>Making the data behind thriving communities a story everyone can see.</p><span class="project-cta">Explore project <b>↗</b></span></div>
-              </button>
-              <button class="project-like" type="button" aria-label="Save Common Ground project" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.7c0 4.4-8.8 10-8.8 10s-8.8-5.6-8.8-10a4.6 4.6 0 0 1 8.8-1.9 4.6 4.6 0 0 1 8.8 1.9Z"/></svg></button>
-            </article>
-          </div>
-        </div>
-      </section>
+            <div class="hero-panel">
+              <div class="top-row">
+                <div>
+                  <p class="small-label">Learning snapshot</p>
+                  <h3>Semester progress</h3>
+                </div>
+                <span class="live-pill">Live</span>
+              </div>
 
-      <section class="section-shell section-block planner-section" id="planner" aria-labelledby="planner-title">
-        <div class="section-heading reveal"><div><div class="eyebrow">A PLAN THAT FEELS LIKE YOU</div><h2 id="planner-title">A little focus goes <span>a long way.</span></h2></div><p>Your week, at a glance. Celebrate the small wins — they’re how the big ones happen.</p></div>
-        <div class="planner-grid">
-          <article class="progress-panel glass-panel reveal">
-            <div class="panel-heading"><div><span class="tiny-label">WEEKLY SNAPSHOT</span><strong>You’re finding your rhythm</strong></div><span class="week-pill">THIS WEEK <span>⌄</span></span></div>
-            <div class="week-total"><strong>12.5<span>h</span></strong><span class="week-change">↗ 2.5h <small>vs. last week</small></span></div>
-            <div class="study-chart" aria-label="Study hours by day this week">
-              <div class="study-day"><div class="study-track"><i style="--study: 46%"></i></div><span>MON</span></div><div class="study-day"><div class="study-track"><i style="--study: 74%"></i></div><span>TUE</span></div><div class="study-day"><div class="study-track"><i style="--study: 58%"></i></div><span>WED</span></div><div class="study-day"><div class="study-track"><i style="--study: 88%"></i></div><span>THU</span></div><div class="study-day"><div class="study-track"><i style="--study: 54%"></i></div><span>FRI</span></div><div class="study-day is-today"><div class="study-track"><i style="--study: 96%"></i></div><span>SAT</span></div><div class="study-day"><div class="study-track"><i style="--study: 23%"></i></div><span>SUN</span></div>
+              <div class="score-hero">
+                <div>
+                  <strong>15</strong>
+                  <span>Core topics</span>
+                </div>
+                <div class="ring-wrap">
+                  <svg viewBox="0 0 100 100" aria-hidden="true">
+                    <circle cx="50" cy="50" r="38" class="ring-track"></circle>
+                    <circle cx="50" cy="50" r="38" class="ring-fill" style="--progress: 72;"></circle>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="mini-grid">
+                <div>
+                  <span class="mini-kicker">Professor</span>
+                  <strong>Sandesh Gupta</strong>
+                  <small>ISC – S101 • Programming &amp; Computing (C &amp; UNIX)</small>
+                </div>
+                <div>
+                  <span class="mini-kicker">Course</span>
+                  <strong>C + UNIX</strong>
+                  <small>Practical + theory</small>
+                </div>
+              </div>
             </div>
-            <div class="progress-divider"></div>
-            <div class="course-progress-head"><span class="tiny-label">IN THE MIX</span><a href="#skills">See all skills <span>↗</span></a></div>
-            <div class="course-progress-row"><span class="course-dot dot-lilac"></span><span>Interface design</span><span class="course-track"><i data-progress="76" style="--progress: 76%"></i></span><strong>76%</strong></div>
-            <div class="course-progress-row"><span class="course-dot dot-mint"></span><span>JavaScript essentials</span><span class="course-track"><i data-progress="54" style="--progress: 54%"></i></span><strong>54%</strong></div>
-            <div class="course-progress-row"><span class="course-dot dot-amber"></span><span>Data storytelling</span><span class="course-track"><i data-progress="38" style="--progress: 38%"></i></span><strong>38%</strong></div>
-          </article>
+          </section>
 
-          <article class="tasks-panel glass-panel reveal">
-            <div class="panel-heading"><div><span class="tiny-label">TODAY, YOUR WAY</span><strong>Daily focus</strong></div><span class="today-label" id="today-label"></span></div>
-            <form class="task-form" id="task-form">
-              <label class="visually-hidden" for="task-input">Add a task</label>
-              <input id="task-input" name="task" type="text" maxlength="120" placeholder="What’s one thing you want to do?" autocomplete="off" required>
-              <button class="add-task-button" type="submit" aria-label="Add task">+</button>
-            </form>
-            <ul class="task-list" id="task-list" aria-live="polite" aria-label="Your daily tasks"></ul>
-            <div class="task-footer"><span class="task-summary" id="task-summary">0 of 0 done</span><span class="task-encouragement">You’ve got this <span>✦</span></span></div>
-          </article>
-        </div>
-      </section>
+          <section class="section stats-grid">
+            <article class="stat-card">
+              <div class="stat-head">
+                <span class="icon-box violet">◌</span>
+                <span class="trend positive">Sample</span>
+              </div>
+              <div class="value-row">
+                <span class="value">15</span>
+                <span class="label">Core topics</span>
+              </div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-head">
+                <span class="icon-box mint">◌</span>
+                <span class="trend positive">Theory</span>
+              </div>
+              <div class="value-row">
+                <span class="value">4</span>
+                <span class="label">Course outcomes</span>
+              </div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-head">
+                <span class="icon-box amber">◌</span>
+                <span class="trend positive">Lab</span>
+              </div>
+              <div class="value-row">
+                <span class="value">C</span>
+                <span class="label">Programming</span>
+              </div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-head">
+                <span class="icon-box cyan">◌</span>
+                <span class="trend positive">System</span>
+              </div>
+              <div class="value-row">
+                <span class="value">UNIX</span>
+                <span class="label">Command line</span>
+              </div>
+            </article>
+          </section>
 
-      <section class="ai-section section-block" id="assistant" aria-labelledby="assistant-title">
-        <div class="section-shell ai-layout">
-          <div class="ai-copy reveal"><div class="eyebrow"><span class="ai-sparkle">✳</span> A SECOND BRAIN, WITH GOOD VIBES</div><h2 id="assistant-title">Meet your new<br>favorite study <span>buddy.</span></h2><p>Brain fog? Big assignment? That one thing you can’t quite figure out? Your AI sidekick is here for all of it — zero judgment, infinite patience.</p><div class="ai-features"><span>✦ Break down big ideas</span><span>✦ Make a study plan</span><span>✦ Get unstuck, faster</span></div><div class="ai-note"><span class="ai-note-dot"></span> Just for this demo — replies are simulated.</div></div>
-          <div class="chat-card glass-panel reveal">
-            <div class="chat-header"><div class="chat-avatar"><span>✳</span><i></i></div><div><strong>Nova</strong><span>Your NEXORA study buddy</span></div><span class="chat-header-menu" aria-hidden="true">•••</span></div>
-            <div class="chat-messages" id="chat-messages" aria-live="polite" aria-label="Conversation with Nova">
-              <div class="chat-time">TODAY · JUST NOW</div>
-              <div class="message message-ai"><span class="message-avatar">✳</span><p>Hey Alex! What are we figuring out today? ✨</p></div>
-              <div class="message message-user"><p>How do I start a project when the brief feels huge?</p></div>
-              <div class="message message-ai"><span class="message-avatar">✳</span><p>Make it smaller. What’s the <em>one thing</em> the project needs to do? Start there, and let the rest follow. Want to break it down together?</p></div>
+          <section class="section quick-access">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Quick actions</p>
+                <h2>Continue with purpose</h2>
+              </div>
             </div>
-            <div class="suggestion-row"><button type="button" class="chat-suggestion">Help me focus</button><button type="button" class="chat-suggestion">Explain a concept</button></div>
-            <form class="chat-form" id="chat-form"><label class="visually-hidden" for="chat-input">Message Nova</label><input id="chat-input" type="text" maxlength="240" placeholder="Ask me anything..." autocomplete="off" required><button type="submit" aria-label="Send message"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 14-7-4 14-3-6-7-1Zm7 1 7-8"/></svg></button></form>
-            <div class="chat-disclaimer">NOVA IS AI · HERE TO HELP, NOT TO REPLACE YOUR THINKING</div>
-          </div>
-        </div>
-      </section>
+            <div class="access-grid">
+              <button class="access-card" type="button" data-scroll="notes">
+                <span>Continue</span>
+                <strong>Continue Learning</strong>
+              </button>
+              <button class="access-card" type="button" data-scroll="quiz">
+                <span>Challenge</span>
+                <strong>Practice Quiz</strong>
+              </button>
+              <button class="access-card" type="button" data-scroll="viva">
+                <span>Lab prep</span>
+                <strong>Viva Practice</strong>
+              </button>
+              <button class="access-card" type="button" data-scroll="papers">
+                <span>Archive</span>
+                <strong>Previous Papers</strong>
+              </button>
+              <button class="access-card" type="button" data-scroll="assignments">
+                <span>Tasks</span>
+                <strong>Assignment</strong>
+              </button>
+              <button class="access-card" type="button" data-scroll="ai">
+                <span>AI support</span>
+                <strong>ISC Study Assistant</strong>
+              </button>
+            </div>
+          </section>
 
-      <section class="contact-section section-shell section-block" id="contact">
-        <div class="contact-card reveal"><div class="contact-orb" aria-hidden="true"></div><div class="contact-content"><span class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</span><h2>Curious looks<br><span>good on you.</span></h2><p>You don’t need the whole plan. Just the next small step. Let’s make it count.</p><a class="button button-primary" href="mailto:hello@nexora.study">Say hello <span aria-hidden="true">↗</span></a></div><div class="contact-side-note"><span>BUILT FOR WHAT’S NEXT</span><span>© 2025 NEXORA STUDIO</span></div></div>
-      </section>
-    </main>
+          <section class="section insight-panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Why ISC Student Hub?</p>
+                <h2>Everything in one connected system.</h2>
+              </div>
+            </div>
+            <div class="value-grid">
+              <article class="value-card">
+                <strong>ONE PLACE</strong>
+                <p>All ISC resources, notes, tasks and revision tools in a single organized space.</p>
+              </article>
+              <article class="value-card">
+                <strong>ACTIVE LEARNING</strong>
+                <p>Quizzes, viva practice, and lab tasks strengthen real coding and UNIX learning.</p>
+              </article>
+              <article class="value-card">
+                <strong>BETTER TEACHING</strong>
+                <p>Announcements, assignments, and performance tracking help professors stay organized.</p>
+              </article>
+            </div>
+          </section>
 
-    <footer class="site-footer section-shell"><a class="brand" href="#home" aria-label="NEXORA home"><span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span><span></span></span><span>NEXORA</span></a><p>Make your next move.</p><div class="footer-links"><a href="#home">Back to top ↑</a><a href="mailto:hello@nexora.study">Get in touch ↗</a></div></footer>
+          <section class="section" id="syllabus">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Course map</p>
+                <h2>Syllabus overview</h2>
+              </div>
+              <p class="section-copy">Programming &amp; Computing (C &amp; UNIX) • ISC – S101 • Course learning modules</p>
+            </div>
+            <div class="module-grid" id="syllabusGrid"></div>
+          </section>
 
-    <div class="toast" id="toast" role="status" aria-live="polite"></div>
-    <dialog class="project-dialog" id="project-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="Close project details">×</button><span class="eyebrow" id="dialog-category"></span><h2 id="dialog-title"></h2><p id="dialog-description"></p><a class="inline-link" href="#contact" id="dialog-contact">Let’s make something <span>↗</span></a></dialog>
+          <section class="section" id="notes">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Revision</p>
+                <h2>Smart notes</h2>
+              </div>
+            </div>
+
+            <div class="filter-bar">
+              <select id="unitFilter" aria-label="Filter notes by unit">
+                <option value="all">All Units</option>
+              </select>
+              <select id="topicFilter" aria-label="Filter notes by topic">
+                <option value="all">All Topics</option>
+              </select>
+              <select id="typeFilter" aria-label="Filter notes by type">
+                <option value="all">All Types</option>
+                <option value="conceptual">Conceptual</option>
+                <option value="summary">Summary</option>
+                <option value="practical">Practical</option>
+              </select>
+            </div>
+
+            <div class="notes-grid" id="notesGrid"></div>
+            <div class="empty-state hidden" id="notesEmpty">No notes match your current filters.</div>
+
+            <div class="revision-card">
+              <div>
+                <p class="mini-label">Exam quick revision</p>
+                <h3>Last-minute memory boost</h3>
+              </div>
+              <ul>
+                <li>Write 3 sub-points for every topic heading.</li>
+                <li>Focus on syntax, definitions, and common coding mistakes.</li>
+                <li>Practice one viva response for each major C and UNIX unit.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="section" id="practicals">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Hands-on</p>
+                <h2>C &amp; UNIX Practical Lab</h2>
+              </div>
+            </div>
+            <div class="practical-list" id="practicalList"></div>
+          </section>
+
+          <section class="section" id="quiz">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Challenge yourself</p>
+                <h2>C &amp; UNIX Quiz Zone</h2>
+              </div>
+            </div>
+
+            <div class="quiz-layout">
+              <div class="quiz-card">
+                <div class="quiz-head">
+                  <div>
+                    <span class="mini-label" id="quizUnitLabel">Unit 1</span>
+                    <h3 id="quizQuestionNumber">Question 1 of 5</h3>
+                  </div>
+                  <div class="timer-box" id="quizTimer">15:00</div>
+                </div>
+
+                <div class="progress-bar">
+                  <span id="quizProgress"></span>
+                </div>
+
+                <div class="question-box" id="quizQuestionBox"></div>
+                <div class="answer-list" id="quizOptions"></div>
+
+                <div class="quiz-controls">
+                  <button class="secondary-btn small" type="button" id="prevQuestion">Previous</button>
+                  <button class="primary-btn small" type="button" id="nextQuestion">Next</button>
+                  <button class="danger-btn small hidden" type="button" id="submitQuiz">Submit quiz</button>
+                </div>
+              </div>
+
+              <aside class="side-panel">
+                <div class="score-box">
+                  <p class="mini-label">Current score</p>
+                  <h3 id="quizScore">0/0</h3>
+                </div>
+                <div class="score-box muted-box">
+                  <p class="mini-label">Score history</p>
+                  <ul id="scoreHistory" class="history-list"></ul>
+                </div>
+              </aside>
+            </div>
+          </section>
+
+          <section class="section" id="assignments">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Workstream</p>
+                <h2>Assignments</h2>
+              </div>
+            </div>
+            <div class="assignment-list" id="assignmentList"></div>
+          </section>
+
+          <section class="section" id="papers">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Archive</p>
+                <h2>Paper vault</h2>
+              </div>
+            </div>
+
+            <div class="filter-bar two-columns">
+              <select id="paperTypeFilter" aria-label="Filter papers by type">
+                <option value="all">All paper types</option>
+                <option value="Mid Semester">Mid Semester</option>
+                <option value="End Semester">End Semester</option>
+                <option value="Class Test">Class Test</option>
+                <option value="Practice Paper">Practice Paper</option>
+              </select>
+              <select id="paperYearFilter" aria-label="Filter papers by year">
+                <option value="all">All years</option>
+              </select>
+            </div>
+
+            <div class="paper-grid" id="paperGrid"></div>
+          </section>
+
+          <section class="section" id="announcements">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Professor updates</p>
+                <h2>Announcements</h2>
+              </div>
+            </div>
+            <div class="announcement-list" id="announcementList"></div>
+          </section>
+
+          <section class="section" id="resources">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Resource library</p>
+                <h2>Study resources</h2>
+              </div>
+            </div>
+            <div class="resource-grid" id="resourceGrid"></div>
+          </section>
+
+          <section class="section about-section" id="about">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">About the subject</p>
+                <h2>What ISC develops</h2>
+              </div>
+            </div>
+
+            <div class="about-grid">
+              <div class="about-card feature-card">
+                <h3>Programming &amp; Computing (C &amp; UNIX)</h3>
+                <p>
+                  ISC – S101 builds strong fundamentals in computer systems, UNIX commands, C programming, algorithms, logic building, file handling, and practical problem solving.
+                </p>
+              </div>
+              <div class="about-card feature-card">
+                <h3>Student-first learning</h3>
+                <p>
+                  This portal blends academic structure with practical preparation, revision tools, and teacher-led engagement.
+                </p>
+              </div>
+              <div class="about-card feature-card professor-mode">
+                <h3>Professor mode</h3>
+                <div class="professor-actions">
+                  <button class="small tertiary-btn" type="button" data-demo="announce">Post announcement</button>
+                  <button class="small tertiary-btn" type="button" data-demo="notes">Upload notes</button>
+                  <button class="small tertiary-btn" type="button" data-demo="assignment">Add assignment</button>
+                  <button class="small tertiary-btn" type="button" data-demo="quiz">Create quiz</button>
+                  <button class="small tertiary-btn" type="button" data-demo="paper">Upload paper</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section ai-section" id="ai">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">AI support</p>
+                <h2>ISC Study Assistant</h2>
+              </div>
+            </div>
+            <div class="ai-panel">
+              <div class="prompt-row">
+                <button class="chip" type="button" data-ai-prompt="Explain pointers in C simply.">Explain pointers in C simply.</button>
+                <button class="chip" type="button" data-ai-prompt="What is the difference between while and do-while?">What is the difference between while and do-while?</button>
+                <button class="chip" type="button" data-ai-prompt="Explain UNIX commands.">Explain UNIX commands.</button>
+                <button class="chip" type="button" data-ai-prompt="Give me practice questions on arrays.">Give me practice questions on arrays.</button>
+              </div>
+              <div class="ai-box">
+                <label class="sr-only" for="aiQuery">ISC Study Assistant</label>
+                <textarea id="aiQuery" rows="3" placeholder="Ask for a quick explanation, practice MCQ, or viva prep..."></textarea>
+                <div class="ai-actions">
+                  <button class="primary-btn small" type="button" id="askAI">Generate response</button>
+                  <span class="ai-status">Demo Mode — AI backend not connected</span>
+                </div>
+              </div>
+              <div class="ai-response" id="aiResponse">
+                <p><strong>Study assistant:</strong> I can help you revise C fundamentals, explain UNIX commands, generate practice MCQs, and prepare you for viva questions on loops, arrays, pointers, and file handling.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section extras-grid">
+            <article class="extra-card">
+              <p class="mini-label">Practice question</p>
+              <h3>What is the difference between a variable and a constant in C?</h3>
+              <p>Practice Question — Self Study</p>
+            </article>
+            <article class="extra-card">
+              <p class="mini-label">Course focus</p>
+              <h3>UNIX + C fundamentals</h3>
+              <p>Revisit shell commands, control statements, loops, arrays, and pointers before the next practical.</p>
+            </article>
+            <article class="extra-card">
+              <p class="mini-label">Study reminder</p>
+              <h3>Revise the syntax</h3>
+              <p>Focus on data types, conditional logic, function definitions, and file handling examples.</p>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
+
+    <div class="modal hidden" id="contentModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="modal"></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" data-close="modal" aria-label="Close dialog">�</button>
+        <p class="mini-label" id="modalType">Note</p>
+        <h3 id="modalTitle">Preview</h3>
+        <div id="modalBody"></div>
+      </div>
+    </div>
   </body>
 </html>
