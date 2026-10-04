@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0b1220" />
+    <meta
+      name="description"
+      content="ISC Student Hub — Programming & Computing (C & UNIX) for ISC – S101 by Sandesh Gupta."
+    />
+    <title>ISC Student Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand-box">
+          <div class="brand-mark">I</div>
+          <div>
+            <p class="brand-kicker">Academic portal</p>
+            <h2>ISC Student Hub</h2>
+          </div>
+        </div>
+
+        <nav class="side-nav" aria-label="Main navigation">
+          <button class="nav-item is-active" data-target="dashboard" type="button">Dashboard</button>
+          <button class="nav-item" data-target="syllabus" type="button">Syllabus</button>
+          <button class="nav-item" data-target="notes" type="button">Notes</button>
+          <button class="nav-item" data-target="practicals" type="button">Practicals</button>
+          <button class="nav-item" data-target="quiz" type="button">Quiz Zone</button>
+          <button class="nav-item" data-target="assignments" type="button">Assignments</button>
+          <button class="nav-item" data-target="papers" type="button">Previous Papers</button>
+          <button class="nav-item" data-target="announcements" type="button">Announcements</button>
+          <button class="nav-item" data-target="resources" type="button">Resources</button>
+          <button class="nav-item" data-target="about" type="button">About ISC</button>
+        </nav>
+
+        <div class="sidebar-card">
+          <p class="mini-label">Professor</p>
+          <h3>Sandesh Gupta</h3>
+          <p>ISC – S101</p>
+        </div>
+      </aside>
+
+      <div class="content-shell">
+        <header class="topbar">
+          <div class="search-wrap">
+            <div class="search-box" role="search">
+              <span class="search-icon">⌕</span>
+              <input id="searchInput" type="search" placeholder="Search notes, topics, papers, activities..." aria-label="Search ISC content" />
+            </div>
+            <div class="search-results hidden" id="searchResults" aria-live="polite"></div>
+          </div>
+
+          <div class="topbar-actions">
+            <button class="icon-button" id="themeToggle" type="button" aria-label="Toggle theme">☾</button>
+            <div class="user-pill">
+              <div class="avatar">S</div>
+              <div>
+                <strong>Student</strong>
+                <span>BTech CSE • 1st Year</span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main>
+          <section class="section hero-section" id="dashboard">
+            <div class="hero-copy">
+              <p class="eyebrow">ISC STUDENT HUB</p>
+              <h1>Everything for ISC. One place.</h1>
+              <p class="lead">
+                ISC – S101 • Programming &amp; Computing (C &amp; UNIX)
+              </p>
+              <p class="lead muted-copy">
+                BTech CSE • 1st Year • Professor: Sandesh Gupta
+              </p>
+              <div class="cta-row">
+                <button class="primary-btn" type="button" data-scroll="notes">Explore Notes</button>
+                <button class="secondary-btn" type="button" data-scroll="quiz">Take a Quiz</button>
+              </div>
+
+              <div class="quick-badges">
+                <div class="mini-stat">
+                  <span class="badge-dot mint"></span>
+                  <div>
+                    <strong>Current focus</strong>
+                    <small>UNIX commands and shell navigation</small>
+                  </div>
+                </div>
+                <div class="mini-stat">
+                  <span class="badge-dot violet"></span>
+                  <div>
+                    <strong>Practical topic</strong>
+                    <small>Vi Editor • Practice lab</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="hero-panel">
+              <div class="top-row">
+                <div>
+                  <p class="small-label">Learning snapshot</p>
+                  <h3>Semester progress</h3>
+                </div>
+                <span class="live-pill">Live</span>
+              </div>
+
+              <div class="score-hero">
+                <div>
+                  <strong>15</strong>
+                  <span>Core topics</span>
+                </div>
+                <div class="ring-wrap">
+                  <svg viewBox="0 0 100 100" aria-hidden="true">
+                    <circle cx="50" cy="50" r="38" class="ring-track"></circle>
+                    <circle cx="50" cy="50" r="38" class="ring-fill" style="--progress: 72;"></circle>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="mini-grid">
+                <div>
+                  <span class="mini-kicker">Professor</span>
+                  <strong>Sandesh Gupta</strong>
+                  <small>ISC – S101 • Programming &amp; Computing (C &amp; UNIX)</small>
+                </div>
+                <div>
+                  <span class="mini-kicker">Course</span>
+                  <strong>C + UNIX</strong>
+                  <small>Practical + theory</small>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section stats-grid">
+            <article class="stat-card">
+              <div class="stat-head">
+                <span class="icon-box violet">◌</span>
+                <span class="trend positive">Sample</span>
+              </div>
+              <div class="value-row">
+                <span class="value">15</span>
+                <span class="label">Core topics</span>
+              </div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-head">
+                <span class="icon-box mint">◌</span>
+                <span class="trend positive">Theory</span>
+              </div>
+              <div class="value-row">
+                <span class="value">4</span>
+                <span class="label">Course outcomes</span>
+              </div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-head">
+                <span class="icon-box amber">◌</span>
+                <span class="trend positive">Lab</span>
+              </div>
+              <div class="value-row">
+                <span class="value">C</span>
+                <span class="label">Programming</span>
+              </div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-head">
+                <span class="icon-box cyan">◌</span>
+                <span class="trend positive">System</span>
+              </div>
+              <div class="value-row">
+                <span class="value">UNIX</span>
+                <span class="label">Command line</span>
+              </div>
+            </article>
+          </section>
+
+          <section class="section quick-access">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Quick actions</p>
+                <h2>Continue with purpose</h2>
+              </div>
+            </div>
+            <div class="access-grid">
+              <button class="access-card" type="button" data-scroll="notes">
+                <span>Continue</span>
+                <strong>Continue Learning</strong>
+              </button>
+              <button class="access-card" type="button" data-scroll="quiz">
+                <span>Challenge</span>
+                <strong>Practice Quiz</strong>
+              </button>
+              <button class="access-card" type="button" data-scroll="viva">
+                <span>Lab prep</span>
+                <strong>Viva Practice</strong>
+              </button>
+              <button class="access-card" type="button" data-scroll="papers">
+                <span>Archive</span>
+                <strong>Previous Papers</strong>
+              </button>
+              <button class="access-card" type="button" data-scroll="assignments">
+                <span>Tasks</span>
+                <strong>Assignment</strong>
+              </button>
+              <button class="access-card" type="button" data-scroll="ai">
+                <span>AI support</span>
+                <strong>ISC Study Assistant</strong>
+              </button>
+            </div>
+          </section>
+
+          <section class="section insight-panel">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Why ISC Student Hub?</p>
+                <h2>Everything in one connected system.</h2>
+              </div>
+            </div>
+            <div class="value-grid">
+              <article class="value-card">
+                <strong>ONE PLACE</strong>
+                <p>All ISC resources, notes, tasks and revision tools in a single organized space.</p>
+              </article>
+              <article class="value-card">
+                <strong>ACTIVE LEARNING</strong>
+                <p>Quizzes, viva practice, and lab tasks strengthen real coding and UNIX learning.</p>
+              </article>
+              <article class="value-card">
+                <strong>BETTER TEACHING</strong>
+                <p>Announcements, assignments, and performance tracking help professors stay organized.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="section" id="syllabus">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Course map</p>
+                <h2>Syllabus overview</h2>
+              </div>
+              <p class="section-copy">Programming &amp; Computing (C &amp; UNIX) • ISC – S101 • Course learning modules</p>
+            </div>
+            <div class="module-grid" id="syllabusGrid"></div>
+          </section>
+
+          <section class="section" id="notes">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Revision</p>
+                <h2>Smart notes</h2>
+              </div>
+            </div>
+
+            <div class="filter-bar">
+              <select id="unitFilter" aria-label="Filter notes by unit">
+                <option value="all">All Units</option>
+              </select>
+              <select id="topicFilter" aria-label="Filter notes by topic">
+                <option value="all">All Topics</option>
+              </select>
+              <select id="typeFilter" aria-label="Filter notes by type">
+                <option value="all">All Types</option>
+                <option value="conceptual">Conceptual</option>
+                <option value="summary">Summary</option>
+                <option value="practical">Practical</option>
+              </select>
+            </div>
+
+            <div class="notes-grid" id="notesGrid"></div>
+            <div class="empty-state hidden" id="notesEmpty">No notes match your current filters.</div>
+
+            <div class="revision-card">
+              <div>
+                <p class="mini-label">Exam quick revision</p>
+                <h3>Last-minute memory boost</h3>
+              </div>
+              <ul>
+                <li>Write 3 sub-points for every topic heading.</li>
+                <li>Focus on syntax, definitions, and common coding mistakes.</li>
+                <li>Practice one viva response for each major C and UNIX unit.</li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="section" id="practicals">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Hands-on</p>
+                <h2>C &amp; UNIX Practical Lab</h2>
+              </div>
+            </div>
+            <div class="practical-list" id="practicalList"></div>
+          </section>
+
+          <section class="section" id="quiz">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Challenge yourself</p>
+                <h2>C &amp; UNIX Quiz Zone</h2>
+              </div>
+            </div>
+
+            <div class="quiz-layout">
+              <div class="quiz-card">
+                <div class="quiz-head">
+                  <div>
+                    <span class="mini-label" id="quizUnitLabel">Unit 1</span>
+                    <h3 id="quizQuestionNumber">Question 1 of 5</h3>
+                  </div>
+                  <div class="timer-box" id="quizTimer">15:00</div>
+                </div>
+
+                <div class="progress-bar">
+                  <span id="quizProgress"></span>
+                </div>
+
+                <div class="question-box" id="quizQuestionBox"></div>
+                <div class="answer-list" id="quizOptions"></div>
+
+                <div class="quiz-controls">
+                  <button class="secondary-btn small" type="button" id="prevQuestion">Previous</button>
+                  <button class="primary-btn small" type="button" id="nextQuestion">Next</button>
+                  <button class="danger-btn small hidden" type="button" id="submitQuiz">Submit quiz</button>
+                </div>
+              </div>
+
+              <aside class="side-panel">
+                <div class="score-box">
+                  <p class="mini-label">Current score</p>
+                  <h3 id="quizScore">0/0</h3>
+                </div>
+                <div class="score-box muted-box">
+                  <p class="mini-label">Score history</p>
+                  <ul id="scoreHistory" class="history-list"></ul>
+                </div>
+              </aside>
+            </div>
+          </section>
+
+          <section class="section" id="assignments">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Workstream</p>
+                <h2>Assignments</h2>
+              </div>
+            </div>
+            <div class="assignment-list" id="assignmentList"></div>
+          </section>
+
+          <section class="section" id="papers">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Archive</p>
+                <h2>Paper vault</h2>
+              </div>
+            </div>
+
+            <div class="filter-bar two-columns">
+              <select id="paperTypeFilter" aria-label="Filter papers by type">
+                <option value="all">All paper types</option>
+                <option value="Mid Semester">Mid Semester</option>
+                <option value="End Semester">End Semester</option>
+                <option value="Class Test">Class Test</option>
+                <option value="Practice Paper">Practice Paper</option>
+              </select>
+              <select id="paperYearFilter" aria-label="Filter papers by year">
+                <option value="all">All years</option>
+              </select>
+            </div>
+
+            <div class="paper-grid" id="paperGrid"></div>
+          </section>
+
+          <section class="section" id="announcements">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Professor updates</p>
+                <h2>Announcements</h2>
+              </div>
+            </div>
+            <div class="announcement-list" id="announcementList"></div>
+          </section>
+
+          <section class="section" id="resources">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Resource library</p>
+                <h2>Study resources</h2>
+              </div>
+            </div>
+            <div class="resource-grid" id="resourceGrid"></div>
+          </section>
+
+          <section class="section about-section" id="about">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">About the subject</p>
+                <h2>What ISC develops</h2>
+              </div>
+            </div>
+
+            <div class="about-grid">
+              <div class="about-card feature-card">
+                <h3>Programming &amp; Computing (C &amp; UNIX)</h3>
+                <p>
+                  ISC – S101 builds strong fundamentals in computer systems, UNIX commands, C programming, algorithms, logic building, file handling, and practical problem solving.
+                </p>
+              </div>
+              <div class="about-card feature-card">
+                <h3>Student-first learning</h3>
+                <p>
+                  This portal blends academic structure with practical preparation, revision tools, and teacher-led engagement.
+                </p>
+              </div>
+              <div class="about-card feature-card professor-mode">
+                <h3>Professor mode</h3>
+                <div class="professor-actions">
+                  <button class="small tertiary-btn" type="button" data-demo="announce">Post announcement</button>
+                  <button class="small tertiary-btn" type="button" data-demo="notes">Upload notes</button>
+                  <button class="small tertiary-btn" type="button" data-demo="assignment">Add assignment</button>
+                  <button class="small tertiary-btn" type="button" data-demo="quiz">Create quiz</button>
+                  <button class="small tertiary-btn" type="button" data-demo="paper">Upload paper</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section ai-section" id="ai">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">AI support</p>
+                <h2>ISC Study Assistant</h2>
+              </div>
+            </div>
+            <div class="ai-panel">
+              <div class="prompt-row">
+                <button class="chip" type="button" data-ai-prompt="Explain pointers in C simply.">Explain pointers in C simply.</button>
+                <button class="chip" type="button" data-ai-prompt="What is the difference between while and do-while?">What is the difference between while and do-while?</button>
+                <button class="chip" type="button" data-ai-prompt="Explain UNIX commands.">Explain UNIX commands.</button>
+                <button class="chip" type="button" data-ai-prompt="Give me practice questions on arrays.">Give me practice questions on arrays.</button>
+              </div>
+              <div class="ai-box">
+                <label class="sr-only" for="aiQuery">ISC Study Assistant</label>
+                <textarea id="aiQuery" rows="3" placeholder="Ask for a quick explanation, practice MCQ, or viva prep..."></textarea>
+                <div class="ai-actions">
+                  <button class="primary-btn small" type="button" id="askAI">Generate response</button>
+                  <span class="ai-status">Demo Mode — AI backend not connected</span>
+                </div>
+              </div>
+              <div class="ai-response" id="aiResponse">
+                <p><strong>Study assistant:</strong> I can help you revise C fundamentals, explain UNIX commands, generate practice MCQs, and prepare you for viva questions on loops, arrays, pointers, and file handling.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="section extras-grid">
+            <article class="extra-card">
+              <p class="mini-label">Practice question</p>
+              <h3>What is the difference between a variable and a constant in C?</h3>
+              <p>Practice Question — Self Study</p>
+            </article>
+            <article class="extra-card">
+              <p class="mini-label">Course focus</p>
+              <h3>UNIX + C fundamentals</h3>
+              <p>Revisit shell commands, control statements, loops, arrays, and pointers before the next practical.</p>
+            </article>
+            <article class="extra-card">
+              <p class="mini-label">Study reminder</p>
+              <h3>Revise the syntax</h3>
+              <p>Focus on data types, conditional logic, function definitions, and file handling examples.</p>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
+
+    <div class="modal hidden" id="contentModal" aria-hidden="true">
+      <div class="modal-backdrop" data-close="modal"></div>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="modal-close" type="button" data-close="modal" aria-label="Close dialog">�</button>
+        <p class="mini-label" id="modalType">Note</p>
+        <h3 id="modalTitle">Preview</h3>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+  </body>
+</html>
