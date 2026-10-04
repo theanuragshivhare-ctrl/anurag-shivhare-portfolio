@@ -189,7 +189,7 @@ function App() {
         <section className="section-wrap about-section" id="about">
           <SectionHeading eyebrow="A little about me" title={<>Curious by nature.<br /><span>Learning by doing.</span></>} />
           <div className="about-grid">
-            <p className="about-lead">I’m Anurag, a first-year BTech Computer Science student at CSJMU. I’m at the beginning of my software engineering journey—and enjoying the process of figuring things out.</p>
+            <p className="about-lead">I’m Anurag, a first-year BTech Computer Science student at CSJMU and an aspiring software engineer. I’m at the beginning of this journey—and enjoying the process of figuring things out.</p>
             <div className="about-details">
               <p>I’m learning programming fundamentals, exploring how the web works, and turning ideas into projects I can share. Building things helps me connect what I study with how software feels when someone actually uses it.</p>
               <p>There’s a lot I haven’t learned yet. That’s the exciting part: each small project gives me a new problem to solve and another reason to keep going.</p>
